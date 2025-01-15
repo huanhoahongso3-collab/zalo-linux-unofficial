@@ -1,5 +1,4 @@
-from pystray import Icon, MenuItem, Menu
-from PIL import Image
+#from PIL import Image
 import os
 import subprocess
 
@@ -21,17 +20,3 @@ def exit_action(icon, item):
     process.kill()
     icon.stop()
 
-# Load the tray icon image
-image = Image.open(icon_path)
-
-# Create the tray menu
-menu = Menu(
-    MenuItem('Mở Zalo', lambda: option1()),
-    MenuItem('Thoát', exit_action)
-)
-
-# Create the tray icon
-icon = Icon("Custom Tray Icon", image, "Zalo", menu)
-
-# Run the icon
-icon.run()
