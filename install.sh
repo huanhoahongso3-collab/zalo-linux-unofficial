@@ -189,14 +189,14 @@ install_dependencies() {
         echo 'Đang cài đặt các phụ thuộc...'
     fi
     if command_exists pip ; then
-        pip install pystray pillow --break-system-packages
+
     else
-        pip3 install pystray pillow --break-system-packages
+        nstall pystray pillow --break-system-packages
     fi
     if [ "$LANGUAGE" == "EN" ]; then
-        echo 'Installed dependencies!'
+        echo 'not Installed dependencies!'
     else
-        echo 'Đã cài đặt các phụ thuộc!'
+        echo 'not Đã cài đặt các phụ thuộc!'
     fi
 }
 
@@ -240,7 +240,7 @@ install_python_debian_ubuntu() {
         echo '*** Đang cài đặt Python trên Debian/Ubuntu...'
     fi
     sudo apt-get update -y
-    sudo apt-get install -y python3 python3-pip git
+    sudo apt-get install -y python3 git
 }
 
 install_python_fedora() {
@@ -249,7 +249,7 @@ install_python_fedora() {
     else
         echo '*** Đang cài đặt Python trên Fedora...'
     fi
-    sudo dnf install -y python3 python3-pip git
+    sudo dnf install -y python3 git
 }
 
 install_python_centos() {
@@ -258,7 +258,7 @@ install_python_centos() {
     else
         echo '*** Đang cài đặt Python trên CentOS/RHEL/RedHat-based...'
     fi
-    sudo yum install -y python3 python3-pip git
+    sudo yum install -y python3 git
 }
 
 if [ ! -f /etc/os-release ]; then
