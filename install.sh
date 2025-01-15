@@ -211,7 +211,6 @@ else
     else
         echo "Python đã được cài đặt."
     fi
-    install_dependencies
     install_menu
 fi
 
