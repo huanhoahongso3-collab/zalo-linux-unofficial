@@ -182,23 +182,6 @@ command_exists() {
     command -v "$1" >/dev/null 2>&1
 }
 
-install_dependencies() {
-    if [ "$LANGUAGE" == "EN" ]; then
-        echo 'Installing dependencies...'
-    else
-        echo 'Đang cài đặt các phụ thuộc...'
-    fi
-    if command_exists pip ; then
-
-    else
-        nstall pystray pillow --break-system-packages
-    fi
-    if [ "$LANGUAGE" == "EN" ]; then
-        echo 'not Installed dependencies!'
-    else
-        echo 'not Đã cài đặt các phụ thuộc!'
-    fi
-}
 
 if ! command_exists python && ! command_exists python3; then
     if [ "$LANGUAGE" == "EN" ]; then
@@ -295,5 +278,4 @@ else
     echo '*** Cài đặt Python hoàn tất!'
 fi
 
-install_dependencies
 install_menu
