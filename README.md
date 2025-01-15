@@ -46,7 +46,7 @@ Zalo will be installed to ~/.local/share/Zalo
 
 ## Fixes
 
-***Python3: Namespace AppIndicator3 not available***
+***Python3: Namespace AppIndicator3 not available*** (not affecting anymore)
 ```bash
 sudo apt install gir1.2-appindicator3-0.1
 ```
